@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MovieZone - Movie Website</title>
+
+  <style>
+    /* Basic Reset & Typography */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      color: #212529;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #343a40;
+      color: white;
+      padding: 1rem 1.5rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1140px;
+      margin: auto;
+      padding: 1rem;
+    }
+
+    /* Grid */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+    .col {
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    .col-12 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    @media (min-width: 576px) {
+      .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+    @media (min-width: 768px) {
+      .col-md-4 {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+      }
+    }
+
+    /* Card */
+    .card {
+      background: white;
+      border-radius: 0.25rem;
+      box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    .card-body {
+      padding: 1rem;
+      flex-grow: 1;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .card-text {
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    /* Button */
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border-radius: 0.25rem;
+      text-decoration: none;
+      border: 1px solid transparent;
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background-color: #343a40;
+      color: white;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    🎬 MovieZone
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <h2 style="margin: 1rem 0;">Now Showing</h2>
+    <div class="row">
+
+      <!-- Movie Card 1 -->
+      <div class="col col-12 col-sm-6 col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/350x200?text=Action+Movie" alt="Action Movie Poster">
+          <div class="card-body">
+            <h3 class="card-title">The Last Warrior</h3>
+            <p class="card-text">An epic action-packed journey of a soldier battling to save humanity.</p>
+            <button class="btn" onclick="showTrailer('The Last Warrior')">Watch Trailer</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Movie Card 2 -->
+      <div class="col col-12 col-sm-6 col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/350x200?text=Romantic+Movie" alt="Romantic Movie Poster">
+          <div class="card-body">
+            <h3 class="card-title">Love Unchained</h3>
+            <p class="card-text">A timeless romance between two souls who meet against all odds.</p>
+            <button class="btn" onclick="showTrailer('Love Unchained')">Watch Trailer</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Movie Card 3 -->
+      <div class="col col-12 col-sm-6 col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/350x200?text=Sci-Fi+Movie" alt="Sci-Fi Movie Poster">
+          <div class="card-body">
+            <h3 class="card-title">Galactic Odyssey</h3>
+            <p class="card-text">A space explorer ventures beyond the stars and discovers new worlds.</p>
+            <button class="btn" onclick="showTrailer('Galactic Odyssey')">Watch Trailer</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 MovieZone. All rights reserved.
+  </footer>
+
+  <!-- JavaScript (No external JS needed) -->
+  <script>
+    function showTrailer(movieName) {
+      alert('Now playing trailer for: ' + movieName);
+    }
+  </script>
+
+</body>
+</html>

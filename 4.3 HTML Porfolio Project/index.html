@@ -1,0 +1,261 @@
+<!-- TODO 1: Create the HTML Boilerplate -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>News Website - No External CSS</title>
+
+<style>
+  /* Minimal Bootstrap-like CSS for grid, buttons, cards */
+
+  /* Container */
+  .container {
+    width: 100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Grid system */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .col {
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+
+  /* Responsive columns */
+  .col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  @media (min-width: 576px) {
+    .col-sm-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  @media (min-width: 768px) {
+    .col-md-4 {
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+    }
+  }
+
+  /* Card */
+  .card {
+    background-color: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .card-body {
+    padding: 1rem;
+    flex-grow: 1;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+
+  .card-text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #555;
+  }
+
+  /* Button */
+  .btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    border: 1px solid transparent;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    user-select: none;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  .btn:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+  }
+
+  /* Navbar */
+  .navbar {
+    background-color: #343a40;
+    padding: 1rem 1.5rem;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  /* Header */
+  header {
+    margin-bottom: 2rem;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+  }
+
+  /* Body and typography */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #212529;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 575px) {
+    .navbar {
+      font-size: 1.25rem;
+      text-align: center;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+<header>
+  <nav class="navbar container">
+    News Today
+  </nav>
+</header>
+
+<main class="container">
+  <div class="row">
+
+    <!-- News Article 1 -->
+    <article class="col-12 col-sm-6 col-md-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/350x200?text=World+News" alt="World News">
+        <div class="card-body">
+          <h2 class="card-title">Global Markets Rally Amid Economic Optimism</h2>
+          <p class="card-text">Stock markets worldwide surged today following positive economic data that exceeded expectations.</p>
+          <a href="#" class="btn" aria-label="Read more about Global Markets Rally">Read More</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- News Article 2 -->
+    <article class="col-12 col-sm-6 col-md-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/350x200?text=Tech+News" alt="Tech News">
+        <div class="card-body">
+          <h2 class="card-title">New Smartphone Model Released With Cutting-Edge Features</h2>
+          <p class="card-text">The latest smartphone offers innovative camera technology and faster processing speeds.</p>
+          <a href="#" class="btn" aria-label="Read more about Smartphone Release">Read More</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- News Article 3 -->
+    <article class="col-12 col-sm-6 col-md-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/350x200?text=Sports" alt="Sports News">
+        <div class="card-body">
+          <h2 class="card-title">Local Team Wins Championship After Thrilling Final</h2>
+          <p class="card-text">In an exciting finish, the hometown heroes clinched the championship title in overtime.</p>
+          <a href="#" class="btn" aria-label="Read more about Championship Win">Read More</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- News Article 4 -->
+    <article class="col-12 col-sm-6 col-md-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/350x200?text=Health" alt="Health News">
+        <div class="card-body">
+          <h2 class="card-title">New Health Guidelines Released for Balanced Diet</h2>
+          <p class="card-text">Experts recommend a diverse diet rich in vegetables, fruits, and whole grains.</p>
+          <a href="#" class="btn" aria-label="Read more about Health Guidelines">Read More</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- News Article 5 -->
+    <article class="col-12 col-sm-6 col-md-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/350x200?text=Entertainment" alt="Entertainment News">
+        <div class="card-body">
+          <h2 class="card-title">Blockbuster Movie Breaks Box Office Records</h2>
+          <p class="card-text">The latest film from a popular franchise has smashed records in its opening weekend.</p>
+          <a href="#" class="btn" aria-label="Read more about Box Office Records">Read More</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- News Article 6 -->
+    <article class="col-12 col-sm-6 col-md-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/350x200?text=Environment" alt="Environment News">
+        <div class="card-body">
+          <h2 class="card-title">Climate Initiatives Gain Momentum Worldwide</h2>
+          <p class="card-text">Governments and organizations step up efforts to combat climate change globally.</p>
+          <a href="#" class="btn" aria-label="Read more about Climate Initiatives">Read More</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 News Today. All rights reserved.
+</footer>
+
+</body>
+</html>
+
+
+
+<!-- TODO 2: Add Your previous projects' HTML into the public folder -->
+
+<!-- TODO 3: Take screenshots of your project previews and add the images to the images folder -->
+
+<!-- TODO 4: Add titles/subtitles etc. -->
+
+<!-- TODO 5: Add a link to the project pages -->
+
+<!-- TODO 6: Add images to show the project previews
+HINT for TODO 6: You can use the height attribute set to 200 to make the image smaller:
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height -->
+
+<!-- TODO 7: Add the Contact Me and About Me page links -->
